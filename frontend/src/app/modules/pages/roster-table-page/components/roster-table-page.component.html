@@ -1,0 +1,32 @@
+<div class="rosterTable">
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">playerid</th>
+      <th scope="col">jersey</th>
+      <th scope="col">name</th>
+      <th scope="col">surname</th>
+      <th scope="col">position</th>
+      <th scope="col">date</th>
+      <th scope="col">weight</th>
+      <th scope="col">height</th>
+      <th scope="col">birthcity</th>
+      <th scope="col">birthstate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let roster of rosters">
+      <td>{{roster.playerid}}</td>
+      <td>{{roster.jersey}}</td>
+      <td>{{roster.fname}}</td>
+      <td>{{roster.sname}}</td>
+      <td>{{roster.position}}</td>
+      <td>{{roster.birthday}}</td>
+      <td>{{roster.weight}}</td>
+      <td>{{roster.height}}</td>
+      <td>{{roster.birthcity}}</td>
+      <td>{{roster.birthstate}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

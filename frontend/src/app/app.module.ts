@@ -9,16 +9,16 @@ import { AppComponent } from "./app.component";
 import {HttpClientModule} from "@angular/common/http";
 import {Ng4LoadingSpinnerModule} from "ng4-loading-spinner";
 import {RouterModule, Routes} from "@angular/router";
-import {BillingDetailsViewComponent} from "./modules/layout/components/billing-details/billing-details-view.component";
-import {NotFoundComponent} from "./modules/layout/components/404/not-found.component";
-import {LayoutModule} from "./modules/layout/layout.module";
-import {HomeComponent} from "./modules/layout/components/home/home.component";
+import {StartPageModule} from "./modules/pages/start-page/start-page.module";
+import {StartPageComponent} from "./modules/pages/start-page/components/start-page.component";
+import {RosterServiceImpl} from "./services/impl/roster.service.impl";
+import {RosterTablePageComponent} from "./modules/pages/roster-table-page/components/roster-table-page.component";
+import {RosterTablePageModule} from "./modules/pages/roster-table-page/roster-table-page.module";
 
 const appRoutes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "home", component: HomeComponent},
-  {path: "billing-details/:id", component: BillingDetailsViewComponent},
-  {path: "**", component: NotFoundComponent}
+  {path: "", component: StartPageComponent},
+  {path: "table", component: RosterTablePageComponent}
+  // {path: "**", component: NotFoundComponent}
 ];
 
 @NgModule({
@@ -28,15 +28,18 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    LayoutModule,
     HttpClientModule,
+    StartPageModule,
+    RosterTablePageModule,
     Ng4LoadingSpinnerModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    RosterServiceImpl
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
