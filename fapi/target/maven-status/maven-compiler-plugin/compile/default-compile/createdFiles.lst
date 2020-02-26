@@ -1,0 +1,6 @@
+com\netcracker\edu\fapi\models\RosterModel.class
+com\netcracker\edu\fapi\FapiApplication.class
+com\netcracker\edu\fapi\service\impl\RosterServiceImpl.class
+com\netcracker\edu\fapi\service\RosterService.class
+com\netcracker\edu\fapi\controller\RosterController.class
+com\netcracker\edu\fapi\models\RosterOrErrorsModel.class
