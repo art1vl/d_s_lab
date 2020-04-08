@@ -5,6 +5,7 @@ import com.netcracker.edu.fapi.models.RosterOrErrorsModel;
 import com.netcracker.edu.fapi.service.RosterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class RosterController {
         this.rosterService = rosterService;
     }
 
+    @Secured("ROLE_USER")
     @GetMapping(value = "/all")
     public ResponseEntity<List> findAll() {
         return ResponseEntity.ok(rosterService.findAll());

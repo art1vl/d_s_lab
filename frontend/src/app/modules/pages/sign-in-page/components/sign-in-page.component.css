@@ -1,0 +1,9 @@
+.sing_in {
+  border: 2px solid gray;
+  border-radius: 15px;
+  width: 350px;
+  margin: 20px auto 40px auto;
+  padding: 10px 70px;
+  background-color: white;
+  box-shadow: 10px 9px 13px gray;
+}

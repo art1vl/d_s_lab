@@ -26,7 +26,6 @@ public class RosterServiceImpl implements RosterService {
 
     @Override
     public List findAll() {
-        List<RosterEntity> arrayList = rosterRepository.findAll();
-        return arrayList;
+        return rosterRepository.findAll();
     }
 }

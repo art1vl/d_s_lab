@@ -3,6 +3,9 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Subject, Subscription} from "rxjs";
 import {RosterServiceImpl} from "../../../../services/impl/roster.service.impl";
 import {rosterModel} from "../../../models/rosterModel";
+// @ts-ignore
+import {CookieService} from "ngx-cookie-service";
+import {UserServiceImpl} from "../../../../services/impl/user.service.impl";
 
 @Component({
   selector: "app-start-page",
@@ -28,7 +31,9 @@ export class StartPageComponent implements OnInit, OnDestroy {
 
   private subscriptions: Subscription[] = [];
 
-  constructor(private rosterService: RosterServiceImpl) {
+  constructor(private rosterService: RosterServiceImpl,
+              private userServiceImpl: UserServiceImpl,
+              private cookieService: CookieService) {
   }
 
   ngOnInit() {
@@ -79,7 +84,7 @@ export class StartPageComponent implements OnInit, OnDestroy {
         Validators.required,
         Validators.pattern('^[A-Z]{2}$')
       ]),
-    },);
+    });
   }
 
   submit(playerid: string, jersey: number, name: string, surname: string,
@@ -115,6 +120,23 @@ export class StartPageComponent implements OnInit, OnDestroy {
         }
       }
     }));
+  }
+
+  isSignIn(): boolean {
+    return this.userServiceImpl.user != null;
+  }
+
+  isAdmin(): boolean {
+    if (!this.isSignIn()) {
+      return false;
+    }
+    return  this.userServiceImpl.user.role === "ADMIN";
+  }
+
+  logOut(): void {
+    this.cookieService.deleteAll();
+    UserServiceImpl.token = "";
+    this.userServiceImpl.user = null;
   }
 
   changeNewRosterFlag() {

@@ -1,0 +1,42 @@
+<div class="registration">
+  <form [formGroup]="registration">
+    <div class="form-row">
+      <div class="form-group">
+        <label>email</label>
+        <input type="email" class="form-control" id="email"
+               formControlName="email"
+               name="email" #email>
+        <div class="alert alert-danger"
+             *ngIf="registration?.controls['email'].invalid && registration?.controls['email'].touched">
+          Incorrect email
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>password</label>
+        <input type="password" class="form-control" id="password"
+               formControlName="password" name="password" #password>
+        <small id="passwordHelp" class="form-text text-muted">Password should contain at least 8 characters.</small>
+        <div class="alert alert-danger"
+             *ngIf="registration.controls['password'].invalid && registration.controls['password'].touched">
+          Incorrect password
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>repeat password</label>
+        <input type="password" class="form-control" id="repeatedPassword"
+               formControlName="repeatPassword" name="password" #repeatedPassword>
+        <div class="alert alert-danger"
+             *ngIf="password.value!= repeatedPassword.value && registration.controls['repeatPassword'].touched">
+          Passwords don't match
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registration.invalid"
+            (click)="submit(email.value, password.value)">Submit
+    </button>
+  </form>
+</div>

@@ -1,3 +1,12 @@
+<div class="buttons">
+  <div *ngIf="!isSignIn()">
+    <button type="button" routerLink="/registration" class="btn btn-light">registration</button> &nbsp; &nbsp;
+    <button type="button" routerLink="/sign/in" class="btn btn-light">sign in</button>
+  </div>
+  <div *ngIf="isSignIn()">
+    <button type="button" class="btn btn-light" (click)="logOut()">log out</button>
+  </div>
+</div>
 <div class="registration">
   <form [formGroup]="myForm">
     <div class="alert alert-danger"
@@ -175,10 +184,17 @@
     </button>
   </form>
 </div>
-<div class="fullTableButton">
+<div class="fullTableButton" *ngIf="isAdmin()">
   <a routerLink="/table">
     <button type="button" class="btn btn-primary">
       Show table
+    </button>
+  </a>
+</div>
+<div class="fullTableButton" *ngIf="isSignIn()">
+  <a routerLink="/user">
+    <button type="button" class="btn btn-primary">
+      Show my page
     </button>
   </a>
 </div>
