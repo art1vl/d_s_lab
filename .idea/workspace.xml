@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66368552-c927-4084-adba-dd2bd392edd8" name="Default Changelist" comment="second lab">
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/exception/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/exception/OAuth2AuthenticationProcessingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/security/oAuth2/HttpCookieOAuth2AuthorizationRequestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/security/oAuth2/OAuth2AuthenticationFailureHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/security/oAuth2/OAuth2AuthenticationSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/security/oAuth2/user/GoogleOAuth2UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/security/oAuth2/user/OAuth2UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/util/CookieUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/pages/oauth-dummy-page/components/oauth-dummy-page.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/pages/oauth-dummy-page/components/oauth-dummy-page.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/pages/oauth-dummy-page/oauth-dummy-page.module.ts" afterDir="false" />
+    <list default="true" id="66368552-c927-4084-adba-dd2bd392edd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/config/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/pages/sign-in-page/components/sign-in-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/pages/sign-in-page/components/sign-in-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/impl/sign-in.service.impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/impl/sign-in.service.impl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/impl/user.service.impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/impl/user.service.impl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/sign-in.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/sign-in.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +300,7 @@
       <workItem from="1586551704003" duration="539000" />
       <workItem from="1586799049878" duration="1195000" />
       <workItem from="1588008005616" duration="975000" />
-      <workItem from="1588018062157" duration="34544000" />
+      <workItem from="1588018062157" duration="35084000" />
     </task>
     <task id="LOCAL-00001" summary="first lab">
       <created>1582737354425</created>
@@ -346,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588161664366</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="oauth2">
+      <created>1588161822355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588161822355</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +367,8 @@
     <MESSAGE value="first lab" />
     <MESSAGE value="second lab" />
     <MESSAGE value="oauth" />
-    <option name="LAST_COMMIT_MESSAGE" value="oauth" />
+    <MESSAGE value="oauth2" />
+    <option name="LAST_COMMIT_MESSAGE" value="oauth2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="90" key="#Deployment" timestamp="1586352957474">
@@ -406,10 +391,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="365" y="63" key="#com.netcracker.edu.fapi.security_in_fapi/0.0.1536.864@0.0.1536.864" timestamp="1588075466714" />
-    <state x="352" y="27" key="CommitChangelistDialog2" timestamp="1588161660724">
+    <state x="352" y="27" key="CommitChangelistDialog2" timestamp="1588161820267">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="352" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588161660724" />
+    <state x="352" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588161820267" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1586353491762">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -418,38 +403,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585517760032" />
-    <state width="1493" height="271" key="GridCell.Tab.0.bottom" timestamp="1588161641428">
+    <state width="1493" height="271" key="GridCell.Tab.0.bottom" timestamp="1588162340696">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588161641428" />
-    <state width="1493" height="271" key="GridCell.Tab.0.center" timestamp="1588161641425">
+    <state width="1493" height="271" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588162340696" />
+    <state width="1493" height="271" key="GridCell.Tab.0.center" timestamp="1588162340695">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588161641425" />
-    <state width="1493" height="271" key="GridCell.Tab.0.left" timestamp="1588161641421">
+    <state width="1493" height="271" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588162340695" />
+    <state width="1493" height="271" key="GridCell.Tab.0.left" timestamp="1588162340695">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588161641421" />
-    <state width="1493" height="271" key="GridCell.Tab.0.right" timestamp="1588161641427">
+    <state width="1493" height="271" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588162340695" />
+    <state width="1493" height="271" key="GridCell.Tab.0.right" timestamp="1588162340696">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588161641427" />
-    <state width="1493" height="271" key="GridCell.Tab.1.bottom" timestamp="1588161641430">
+    <state width="1493" height="271" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588162340696" />
+    <state width="1493" height="271" key="GridCell.Tab.1.bottom" timestamp="1588162340699">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588161641430" />
-    <state width="1493" height="271" key="GridCell.Tab.1.center" timestamp="1588161641429">
+    <state width="1493" height="271" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588162340699" />
+    <state width="1493" height="271" key="GridCell.Tab.1.center" timestamp="1588162340697">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1588161641429" />
-    <state width="1493" height="271" key="GridCell.Tab.1.left" timestamp="1588161641428">
+    <state width="1493" height="271" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1588162340697" />
+    <state width="1493" height="271" key="GridCell.Tab.1.left" timestamp="1588162340697">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1588161641428" />
-    <state width="1493" height="271" key="GridCell.Tab.1.right" timestamp="1588161641430">
+    <state width="1493" height="271" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1588162340697" />
+    <state width="1493" height="271" key="GridCell.Tab.1.right" timestamp="1588162340698">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1588161641430" />
+    <state width="1493" height="271" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1588162340698" />
     <state width="1493" height="271" key="GridCell.Tab.2.bottom" timestamp="1588109470689">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
