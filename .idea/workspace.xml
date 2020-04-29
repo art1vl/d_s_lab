@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66368552-c927-4084-adba-dd2bd392edd8" name="Default Changelist" comment="">
+    <list default="true" id="66368552-c927-4084-adba-dd2bd392edd8" name="Default Changelist" comment="oauth2">
+      <change beforePath="$PROJECT_DIR$/.idea/web_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/config/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -94,6 +97,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="JPA.DatabaseSchemaImportDialog" value="7ee63897-096e-4acf-8312-be3acbe7fce4" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -301,6 +305,7 @@
       <workItem from="1586799049878" duration="1195000" />
       <workItem from="1588008005616" duration="975000" />
       <workItem from="1588018062157" duration="35084000" />
+      <workItem from="1588162629490" duration="574000" />
     </task>
     <task id="LOCAL-00001" summary="first lab">
       <created>1582737354425</created>
@@ -371,10 +376,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="oauth2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="90" key="#Deployment" timestamp="1586352957474">
+    <state x="360" y="90" key="#Deployment" timestamp="1588162779157">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="360" y="90" key="#Deployment/0.0.1536.864@0.0.1536.864" timestamp="1586352957474" />
+    <state x="360" y="90" key="#Deployment/0.0.1536.864@0.0.1536.864" timestamp="1588162779157" />
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588108685469">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -391,10 +396,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="365" y="63" key="#com.netcracker.edu.fapi.security_in_fapi/0.0.1536.864@0.0.1536.864" timestamp="1588075466714" />
-    <state x="352" y="27" key="CommitChangelistDialog2" timestamp="1588161820267">
+    <state x="352" y="27" key="CommitChangelistDialog2" timestamp="1588163122481">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="352" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588161820267" />
+    <state x="352" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588163122481" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1586353491762">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -487,6 +492,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1588008492799" />
+    <state x="578" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588162727713">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="578" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1588162727713" />
     <state x="328" y="168" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586344599927">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

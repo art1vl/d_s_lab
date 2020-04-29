@@ -25,6 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
     private OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
 
+    @Autowired
     WebSecurityConfig(JwtTokenProvider jwtTokenProvider,
                       OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler,
                       OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler) {
