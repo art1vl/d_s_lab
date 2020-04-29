@@ -30,5 +30,7 @@
     <button type="submit" class="btn btn-primary" [disabled]="signIn.invalid"
             (click)="submit(email.value, password.value)">Submit
     </button>
+<!--    <a href="http://localhost:8081/api/oauth2/authorize/google?redirect_uri=http://localhost:4301/registration">google</a>-->
   </form>
+  <a href="http://localhost:8081/api/oauth2/authorize/google?redirect_uri=http://localhost:4301/oauth">Google</a>
 </div>

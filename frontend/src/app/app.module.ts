@@ -26,13 +26,16 @@ import {AuthInterceptor} from "./services/AuthInterceptor";
 import {initApp} from "./services/app.initialiser";
 import {UserPageModule} from "./modules/pages/user-page/user-page.module";
 import {UserComponent} from "./modules/pages/user-page/components/user-page.component";
+import {OauthDummyPageModule} from "./modules/pages/oauth-dummy-page/oauth-dummy-page.module";
+import {OauthDummyPageComponent} from "./modules/pages/oauth-dummy-page/components/oauth-dummy-page.component";
 
 const appRoutes: Routes = [
   {path: "", component: StartPageComponent},
   {path: "table", component: RosterTablePageComponent},
   {path: "registration", component: RegistrationPageComponent},
   {path: "sign/in", component: SignInPageComponent},
-  {path: "user", component: UserComponent}
+  {path: "user", component: UserComponent},
+  {path: "oauth", component: OauthDummyPageComponent}
   // {path: "**", component: NotFoundComponent}
 ];
 
@@ -49,6 +52,7 @@ const appRoutes: Routes = [
     SignInPageModule,
     UserPageModule,
     RegistrationPageModule,
+    OauthDummyPageModule,
     Ng4LoadingSpinnerModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),

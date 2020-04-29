@@ -2,6 +2,9 @@ package com.netcracker.edu.fapi.config.security;
 
 import com.netcracker.edu.fapi.security.JwtConfigurer;
 import com.netcracker.edu.fapi.security.JwtTokenProvider;
+import com.netcracker.edu.fapi.security.oAuth2.HttpCookieOAuth2AuthorizationRequestRepository;
+import com.netcracker.edu.fapi.security.oAuth2.OAuth2AuthenticationFailureHandler;
+import com.netcracker.edu.fapi.security.oAuth2.OAuth2AuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,13 +21,27 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
     private JwtTokenProvider jwtTokenProvider;
+    private OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
+    private OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
+
+    WebSecurityConfig(JwtTokenProvider jwtTokenProvider,
+                      OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler,
+                      OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler) {
+        this.jwtTokenProvider = jwtTokenProvider;
+        this.oAuth2AuthenticationSuccessHandler = oAuth2AuthenticationSuccessHandler;
+        this.oAuth2AuthenticationFailureHandler = oAuth2AuthenticationFailureHandler;
+    }
 
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception{
         return super.authenticationManagerBean();
+    }
+
+    @Bean
+    public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository() {
+        return new HttpCookieOAuth2AuthorizationRequestRepository();
     }
 
     @Override
@@ -36,7 +53,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/api/roster", "/api/user/register", "/api/sign/in").permitAll()
+                .antMatchers("/api/oauth2/**").permitAll()
                 .anyRequest().authenticated()
+                .and()
+                .oauth2Login()
+                .authorizationEndpoint()
+                .baseUri("/api/oauth2/authorize")
+                .authorizationRequestRepository(cookieAuthorizationRequestRepository())
+                .and()
+                .redirectionEndpoint()
+           //     .baseUri("oauth2/callback/*")
+                .baseUri("/login/oauth2/**")
+//                .and()
+//                .userInfoEndpoint()
+//                .userService(customOAuth2UserService)
+                .and()
+                .successHandler(oAuth2AuthenticationSuccessHandler)
+                .failureHandler(oAuth2AuthenticationFailureHandler)
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
     }

@@ -14,4 +14,8 @@ export class SignInServiceImpl implements SignInService {
   signIn(user: UserModel): Observable<SignInModel> {
     return this.http.post<SignInModel>("/api/sign/in", user);
   }
+
+  findUserByToken(token: string): Observable<UserModel> {
+    return this.http.get<UserModel>("/api/sign/in/" + token);
+  }
 }

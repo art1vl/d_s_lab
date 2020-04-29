@@ -4,4 +4,6 @@ import {UserModel} from "../modules/models/userModel";
 
 export interface SignInService {
   signIn(user: UserModel): Observable<SignInModel>;
+
+  findUserByToken(token: string): Observable<UserModel>;
 }

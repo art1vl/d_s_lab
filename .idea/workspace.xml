@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66368552-c927-4084-adba-dd2bd392edd8" name="Default Changelist" comment="">
+    <list default="true" id="66368552-c927-4084-adba-dd2bd392edd8" name="Default Changelist" comment="second lab">
       <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/exception/BadRequestException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/exception/OAuth2AuthenticationProcessingException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/edu/fapi/security/oAuth2/HttpCookieOAuth2AuthorizationRequestRepository.java" afterDir="false" />
@@ -323,7 +323,7 @@
       <workItem from="1586551704003" duration="539000" />
       <workItem from="1586799049878" duration="1195000" />
       <workItem from="1588008005616" duration="975000" />
-      <workItem from="1588018062157" duration="34216000" />
+      <workItem from="1588018062157" duration="34544000" />
     </task>
     <task id="LOCAL-00001" summary="first lab">
       <created>1582737354425</created>
@@ -339,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586353045327</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="oauth">
+      <created>1588161664366</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588161664366</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +382,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first lab" />
     <MESSAGE value="second lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="second lab" />
+    <MESSAGE value="oauth" />
+    <option name="LAST_COMMIT_MESSAGE" value="oauth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="90" key="#Deployment" timestamp="1586352957474">
@@ -398,10 +406,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="365" y="63" key="#com.netcracker.edu.fapi.security_in_fapi/0.0.1536.864@0.0.1536.864" timestamp="1588075466714" />
-    <state x="352" y="27" key="CommitChangelistDialog2" timestamp="1588161639782">
+    <state x="352" y="27" key="CommitChangelistDialog2" timestamp="1588161660724">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="352" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588161639782" />
+    <state x="352" y="27" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588161660724" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1586353491762">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

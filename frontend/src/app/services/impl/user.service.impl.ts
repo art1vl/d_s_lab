@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable()
-export class UserServiceImpl implements UserService{
+export class UserServiceImpl implements UserService {
   static token: String = "";
   user: UserModel;
 
