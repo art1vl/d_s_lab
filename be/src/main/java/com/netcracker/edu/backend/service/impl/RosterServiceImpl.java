@@ -6,7 +6,6 @@ import com.netcracker.edu.backend.service.RosterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,5 +26,20 @@ public class RosterServiceImpl implements RosterService {
     @Override
     public List findAll() {
         return rosterRepository.findAll();
+    }
+
+    @Override
+    public RosterEntity findRecord(String playerId) {
+        return rosterRepository.findByPlayerid(playerId);
+    }
+
+    @Override
+    public void deleteRecord(String playerId) {
+        rosterRepository.deleteByPlayerid(playerId);
+    }
+
+    @Override
+    public void editRecord(RosterEntity rosterEntity) {
+        rosterRepository.save(rosterEntity);
     }
 }

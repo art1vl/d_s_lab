@@ -9,4 +9,10 @@ public interface RosterService {
     RosterOrErrorsModel save(RosterModel rosterModel);
 
     List findAll();
+
+    void deleteRecord(String playerId);
+
+    void editRecord(RosterModel rosterModel);
+
+    RosterModel findRecord(String playerId);
 }

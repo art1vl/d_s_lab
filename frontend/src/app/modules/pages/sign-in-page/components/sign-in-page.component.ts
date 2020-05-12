@@ -49,7 +49,7 @@ export class SignInPageComponent implements OnInit, OnDestroy {
         this.cookieService.put("token", signInModel.token);
         UserServiceImpl.token = signInModel.token;
         this.userServiceImpl.user = signInModel.user;
-        this.router.navigate(["/"]);
+        this.router.navigate(["/table"]);
       } else {
         this.errors = signInModel.errors;
         this.signIn.reset();

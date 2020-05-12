@@ -12,7 +12,6 @@ import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @Service
 public class RosterServiceImpl implements RosterService {
@@ -41,6 +40,24 @@ public class RosterServiceImpl implements RosterService {
     public List findAll() {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(backendServerUrl + "/api/roster/all", List.class);
+    }
+
+    @Override
+    public RosterModel findRecord(String playerId) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl + "/api/roster/" + playerId, RosterModel.class);
+    }
+
+    @Override
+    public void deleteRecord(String playerId) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete(backendServerUrl + "/api/roster/" + playerId);
+    }
+
+    @Override
+    public void editRecord(RosterModel rosterModel) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.put(backendServerUrl + "/api/roster/edit", rosterModel);
     }
 
     private boolean isRosterIdBusy(String rosterId) {

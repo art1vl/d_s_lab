@@ -529,15 +529,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="appProperties.getOauth2()" language="JAVA" />
-        <watch expression=" authentication.getPrincipal()" language="JAVA" />
-        <watch expression="((DefaultOidcUser) authentication.getPrincipal()).attributes" language="JAVA" custom="org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser" />
-        <watch expression="((DefaultOidcUser) authentication.getPrincipal()).getAttributes().get(&quot;email&quot;)" language="JAVA" />
-        <watch expression="signInDataService.findUserByEmail(token)" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="masterDetails">
     <states>

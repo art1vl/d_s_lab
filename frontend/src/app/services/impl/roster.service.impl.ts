@@ -18,4 +18,16 @@ export class RosterServiceImpl implements RosterService {
   findAll(): Observable<rosterModel[]> {
     return this.http.get<rosterModel[]>('/api/roster/all');
   }
+
+  findByPlayerId(playerId: string): Observable<rosterModel> {
+    return this.http.get<rosterModel>('/api/roster/' + playerId);
+  }
+
+  deleteRecord(playerId: string): Observable<void> {
+    return this.http.delete<void>('/api/roster/' + playerId);
+  }
+
+  editRecord(roster: rosterModel): Observable<rosterModel> {
+    return this.http.put<rosterModel>('/api/roster/edit', roster);
+  }
 }

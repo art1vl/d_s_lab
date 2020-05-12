@@ -1,3 +1,12 @@
+<div class="buttons">
+  <div *ngIf="!isSignIn()">
+    <button type="button" routerLink="/registration" class="btn btn-light">registration</button> &nbsp; &nbsp;
+    <button type="button" routerLink="/sign/in" class="btn btn-light">sign in</button>
+  </div>
+  <div *ngIf="isSignIn()">
+    <button type="button" class="btn btn-light" (click)="logOut()">log out</button>
+  </div>
+</div>
 <div class="rosterTable">
   <table class="table">
     <thead class="thead-dark">
@@ -26,6 +35,20 @@
       <td>{{roster.height}}</td>
       <td>{{roster.birthcity}}</td>
       <td>{{roster.birthstate}}</td>
+
+      <!--MODER-->
+      <td *ngIf="role == 'MODER'">
+        <button type="submit" class="btn btn-primary" (click)="edit(roster.playerid)">Edit</button>
+      </td>
+
+      <!--ADMIN-->
+      <td *ngIf="role == 'ADMIN'">
+        <button type="submit" class="btn btn-success" (click)="add()">Add</button>
+      </td>
+      <td *ngIf="role == 'ADMIN'">
+        <button type="submit" class="btn btn-danger" (click)="delete(roster.playerid)">Delete</button>
+      </td>
+
     </tr>
     </tbody>
   </table>

@@ -10,4 +10,10 @@ public interface RosterService {
     boolean isExistById(String rosterId);
 
     List findAll();
+
+    RosterEntity findRecord(String playerId);
+
+    void deleteRecord(String playerId);
+
+    void editRecord(RosterEntity rosterEntity);
 }

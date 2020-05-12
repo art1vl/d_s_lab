@@ -8,6 +8,11 @@
   box-shadow: 10px 9px 13px gray;
 }
 
-.submit {
-  padding-left: 60px;
+.fullTableButton {
+  margin: 20px 700px;
+}
+
+.buttons {
+  padding-top: 10px;
+  margin-left: 1250px;
 }

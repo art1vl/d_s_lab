@@ -1,0 +1,160 @@
+<div class="registration">
+  <form [formGroup]="myForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label>playerid</label>
+        <input type="text" class="form-control" id="inputPlayerid" placeholder="adamlem"
+               formControlName="playerid"
+               name="playerid" readonly #playerid>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>jersey</label>
+        <input type="text" class="form-control" id="inputJersey" placeholder="1"
+               formControlName="jersey" name="jersey" #jersey>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['jersey'].invalid && myForm.controls['jersey'].touched">
+          Incorrect jersey
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['jersey'] != undefined">
+          {{errors['jersey']}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>First name</label>
+        <input type="text" class="form-control" id="inputFirstName" placeholder="Mike" formControlName="userName"
+               name="userName" #name>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
+          Incorrect name
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['name'] != undefined">
+          {{errors['name']}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Last name</label>
+        <input type="text" class="form-control" id="inputLastName" placeholder="Smith" formControlName="userSurname"
+               name="userSurname" #surname>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['userSurname'].invalid && myForm.controls['userSurname'].touched">
+          Incorrect last name
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['surname'] != undefined">
+          {{errors['surname']}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>position</label>
+        <input type="text" class="form-control" id="inputPosition" placeholder="RW"
+               formControlName="position" name="position" #position>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['position'].invalid && myForm.controls['position'].touched">
+          Incorrect position
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['position'] != undefined">
+          {{errors['position']}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>birthday</label>
+        <input class="form-control"
+               placeholder="Select date"
+               formControlName="date"
+               ngModel
+               bsDatepicker
+               [minDate]="minDate"
+               [maxDate]="maxDate"
+               [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY' }" #date>
+      </div>
+      <div class="alert alert-danger"
+           *ngIf="myForm?.controls['date'].invalid && myForm?.controls['date'].touched">
+        Date is required
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>weight</label>
+        <input type="text" class="form-control" id="inputWeight" placeholder="75"
+               formControlName="weight" name="weight" #weight>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['weight'].invalid && myForm.controls['weight'].touched">
+          Incorrect weight
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['weight'] != undefined">
+          {{errors['weight']}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>height</label>
+        <input type="text" class="form-control" id="inputHeight" placeholder="170"
+               formControlName="height" name="height" #height>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['height'].invalid && myForm.controls['height'].touched">
+          Incorrect height
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['height'] != undefined">
+          {{errors['height']}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>birthcity</label>
+        <input type="text" class="form-control" id="inputBirthcity" placeholder="Kiev"
+               formControlName="birthcity" name="birthcity" #birthcity>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['birthcity'].invalid && myForm.controls['birthcity'].touched">
+          Incorrect birthcity
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['birthcity'] != undefined">
+          {{errors['birthcity']}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>birthstate</label>
+        <input type="text" class="form-control" id="inputBirthstate" placeholder="CO"
+               formControlName="birthstate" name="birthstate" #birthstate>
+        <div class="alert alert-danger"
+             *ngIf="myForm.controls['birthstate'].invalid && myForm.controls['birthstate'].touched">
+          Incorrect birthstate
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="errors && errors['birthstate'] != undefined">
+          {{errors['birthstate']}}
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" [disabled]="myForm.invalid"
+            (click)="edit(playerid.value, jersey.value, name.value, surname.value, position.value,
+             date.value, weight.value, height.value,birthcity.value, birthstate.value)">
+      Save changes
+    </button>
+  </form>
+</div>
+<div class="fullTableButton">
+  <a routerLink="/table">
+    <button type="button" class="btn btn-primary">
+      Show table
+    </button>
+  </a>
+</div>
+

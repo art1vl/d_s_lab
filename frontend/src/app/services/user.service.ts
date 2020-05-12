@@ -5,4 +5,6 @@ export interface UserService {
   register(user: UserModel): Observable<void>;
 
   getUserInfo(email: String): Observable<UserModel>;
+
+  isUserLoggedIn(): boolean;
 }

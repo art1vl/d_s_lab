@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RosterRepository extends JpaRepository<RosterEntity, String> {
     RosterEntity findByPlayerid(String id);
+
+    @Transactional
+    void deleteByPlayerid(@Param("playerid") String playerId);
 }

@@ -12,6 +12,10 @@ export class UserServiceImpl implements UserService {
   constructor(private http: HttpClient) {
   }
 
+  isUserLoggedIn(): boolean {
+    return this.user != null;
+  }
+
   register(user: UserModel): Observable<void> {
     return this.http.post<void>("/api/user/register", user);
   }

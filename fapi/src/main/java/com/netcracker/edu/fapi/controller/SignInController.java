@@ -35,7 +35,7 @@ public class SignInController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Secured({"ROLE_USER", "ROLE_ADMIN"})
+    @Secured({"ROLE_USER", "ROLE_ADMIN", "ROLE_ADMIN"})
     @GetMapping(value = "/{token}")
     public ResponseEntity<UserModel> getUserByToken(@PathVariable("token") String token) {
         return ResponseEntity.ok(signInDataService.getUserByToken(token));

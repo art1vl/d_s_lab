@@ -1,16 +1,16 @@
-import { BrowserModule } from "@angular/platform-browser";
+import {BrowserModule} from "@angular/platform-browser";
 import {APP_INITIALIZER, NgModule} from "@angular/core";
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { ModalModule } from "ngx-bootstrap/modal";
-import { FormsModule } from "@angular/forms";
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import {TooltipModule} from "ngx-bootstrap/tooltip";
+import {ModalModule} from "ngx-bootstrap/modal";
+import {FormsModule} from "@angular/forms";
 
-import { AppComponent } from "./app.component";
+import {AppComponent} from "./app.component";
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {Ng4LoadingSpinnerModule} from "ng4-loading-spinner";
 import {RouterModule, Routes} from "@angular/router";
-import {StartPageModule} from "./modules/pages/start-page/start-page.module";
-import {StartPageComponent} from "./modules/pages/start-page/components/start-page.component";
+import {NewRecordPageModule} from "./modules/pages/new-record-page/new-record-page.module";
+import {NewRecordPageComponent} from "./modules/pages/new-record-page/components/new-record-page.component";
 import {RosterServiceImpl} from "./services/impl/roster.service.impl";
 import {RosterTablePageComponent} from "./modules/pages/roster-table-page/components/roster-table-page.component";
 import {RosterTablePageModule} from "./modules/pages/roster-table-page/roster-table-page.module";
@@ -28,9 +28,12 @@ import {UserPageModule} from "./modules/pages/user-page/user-page.module";
 import {UserComponent} from "./modules/pages/user-page/components/user-page.component";
 import {OauthDummyPageModule} from "./modules/pages/oauth-dummy-page/oauth-dummy-page.module";
 import {OauthDummyPageComponent} from "./modules/pages/oauth-dummy-page/components/oauth-dummy-page.component";
+import {EditRecordPageModule} from "./modules/pages/edit-record-page/edit-record-page.module";
+import {EditRecordPageComponent} from "./modules/pages/edit-record-page/components/edit-record-page.component";
 
 const appRoutes: Routes = [
-  {path: "", component: StartPageComponent},
+  {path: "edit/:playerId", component: EditRecordPageComponent},
+  {path: "new/record", component: NewRecordPageComponent},
   {path: "table", component: RosterTablePageComponent},
   {path: "registration", component: RegistrationPageComponent},
   {path: "sign/in", component: SignInPageComponent},
@@ -47,7 +50,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    StartPageModule,
+    EditRecordPageModule,
+    NewRecordPageModule,
     RosterTablePageModule,
     SignInPageModule,
     UserPageModule,
@@ -74,9 +78,10 @@ const appRoutes: Routes = [
       provide: APP_INITIALIZER,
       useFactory: initApp,
       multi: true,
-      deps: [HttpClient,
-            UserServiceImpl,
-            CookieService
+      deps: [
+        HttpClient,
+        UserServiceImpl,
+        CookieService
       ]
     }
   ],
